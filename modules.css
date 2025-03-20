@@ -1,0 +1,185 @@
+/* Core Modules */
+.modules {
+    background: linear-gradient(rgba(249, 249, 249, 0.95), rgba(249, 249, 249, 0.95)), url('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.module-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.module-card {
+    flex: 1;
+    min-width: 260px;
+    max-width: 280px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.module-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.module-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.7), rgba(0, 184, 148, 0.7));
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.module-card:hover .module-image::before {
+    opacity: 0.9;
+}
+
+.module-image svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.module-card:hover .module-image svg {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.nutrition-bg,
+.exercise-bg,
+.community-bg,
+.reminder-bg {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.nutrition-bg {
+    background: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.exercise-bg {
+    background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.community-bg {
+    background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.reminder-bg {
+    background: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.module-card:hover .nutrition-bg,
+.module-card:hover .exercise-bg,
+.module-card:hover .community-bg,
+.module-card:hover .reminder-bg {
+    transform: scale(1.1);
+}
+
+.module-content {
+    padding: 1.8rem;
+}
+
+.module-content h3 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.module-content ul {
+    padding-left: 1.5rem;
+    color: var(--gray);
+}
+
+.module-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* App Screenshots */
+.app-preview {
+    padding: 4rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    margin-top: 4rem;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-preview h3 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.app-screens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.app-screen {
+    width: 250px;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border: 12px solid #2d3436;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.app-screen:hover {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.app-screen::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 6px;
+    background-color: #1e272e;
+    border-radius: 10px 10px 0 0;
+    z-index: 2;
+}
+
+.app-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.app-screen:hover img {
+    transform: scale(1.05);
+}
